@@ -1,3 +1,15 @@
+> [!IMPORTANT]
+> This is a fork of [lukeraymonddowning/self-healing-urls](https://github.com/lukeraymonddowning/self-healing-urls) to support Laravel 12 and will likely be removed when the PR is merged. To use this fork add the GitHub repository to your composer repository config.
+
+```
+"repositories": {
+    "self-healing-urls": {
+        "type": "vcs",
+        "url": "https://github.com/alexjustesen/self-healing-urls"
+    }
+}
+```
+
 # Self Healing URLs
 
 Self Healing URLs is a simple Laravel package inspired by [this video from Aaron Francis](https://www.youtube.com/watch?v=a6lnfyES-LA&t=554s).
@@ -33,7 +45,7 @@ use Lukeraymonddowning\SelfHealingUrls\Concerns\HasSelfHealingUrls;
 class Post extends Model
 {
     use HasSelfHealingUrls;
-    
+
     protected $slug = 'title';
 }
 ```
